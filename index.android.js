@@ -6,26 +6,26 @@
 
 import React, { Component } from 'react';
 import {
+  Alert,
   AppRegistry,
   StyleSheet,
   Text,
-  View
+  View,
+  Image,
+  TextInput,
+  TouchableOpacity,
+  AsyncStorage
 } from 'react-native';
 
 export default class FH extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.android.js
-        </Text>
-        <Text style={styles.instructions}>
-          Double tap R on your keyboard to reload,{'\n'}
-          Shake or press menu button for dev menu
-        </Text>
+        <View style={styles.content}>
+          <Text style={styles.logo}></Text>
+          <Image source={require('./logo.png')} style={{width: 80, height: 80, marginBottom : 50}} />
+          
+        </View>
       </View>
     );
   }
